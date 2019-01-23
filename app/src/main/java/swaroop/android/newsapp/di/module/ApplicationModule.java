@@ -2,11 +2,10 @@ package swaroop.android.newsapp.di.module;
 
 import android.app.Application;
 import android.content.Context;
-import android.content.SharedPreferences;
 
 import dagger.Module;
 import dagger.Provides;
-import swaroop.android.newsapp.di.ApplicationContext;
+import swaroop.android.newsapp.di.qualifiers.ApplicationContext;
 
 @Module
 public class ApplicationModule {

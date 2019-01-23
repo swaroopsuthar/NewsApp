@@ -5,7 +5,7 @@ import android.content.Context;
 
 import dagger.Module;
 import dagger.Provides;
-import swaroop.android.newsapp.di.ActivityContext;
+import swaroop.android.newsapp.di.qualifiers.ActivityContext;
 
 @Module
 public class ActivityModule {

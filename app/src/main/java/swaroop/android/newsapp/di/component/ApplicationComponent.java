@@ -6,7 +6,7 @@ import android.content.Context;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import swaroop.android.newsapp.di.ApplicationContext;
+import swaroop.android.newsapp.di.qualifiers.ApplicationContext;
 import swaroop.android.newsapp.di.module.ApplicationModule;
 
 @Singleton
