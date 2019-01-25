@@ -6,6 +6,7 @@ import android.content.Context;
 import dagger.Module;
 import dagger.Provides;
 import swaroop.android.newsapp.di.qualifiers.ActivityContext;
+import swaroop.android.newsapp.di.scope.ActivityScope;
 
 @Module
 public class ActivityModule {
@@ -17,6 +18,7 @@ public class ActivityModule {
     }
 
     @Provides
+    @ActivityScope
     @ActivityContext
     Context provideContext() {
         return mActivity;

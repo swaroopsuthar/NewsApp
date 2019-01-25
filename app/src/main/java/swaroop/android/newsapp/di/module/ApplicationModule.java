@@ -3,9 +3,12 @@ package swaroop.android.newsapp.di.module;
 import android.app.Application;
 import android.content.Context;
 
+import javax.inject.Singleton;
+
 import dagger.Module;
 import dagger.Provides;
 import swaroop.android.newsapp.di.qualifiers.ApplicationContext;
+import swaroop.android.newsapp.di.scope.ApplicationScope;
 
 @Module
 public class ApplicationModule {
@@ -17,6 +20,7 @@ public class ApplicationModule {
     }
 
     @Provides
+    @ApplicationScope
     @ApplicationContext
     Context provideContext() {
         return mApplication;

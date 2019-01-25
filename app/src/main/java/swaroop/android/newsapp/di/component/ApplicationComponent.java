@@ -8,8 +8,9 @@ import javax.inject.Singleton;
 import dagger.Component;
 import swaroop.android.newsapp.di.qualifiers.ApplicationContext;
 import swaroop.android.newsapp.di.module.ApplicationModule;
+import swaroop.android.newsapp.di.scope.ApplicationScope;
 
-@Singleton
+@ApplicationScope
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
 

@@ -3,13 +3,21 @@ package swaroop.android.newsapp;
 import android.app.Application;
 import android.content.Context;
 
+import com.squareup.picasso.Picasso;
+
 import swaroop.android.newsapp.di.component.ApplicationComponent;
 import swaroop.android.newsapp.di.component.DaggerApplicationComponent;
+import swaroop.android.newsapp.di.component.DaggerNetworkComponent;
+import swaroop.android.newsapp.di.component.NetworkComponent;
 import swaroop.android.newsapp.di.module.ApplicationModule;
+import swaroop.android.newsapp.network.APIInterface;
 
 public class MyApplication extends Application {
 
-    protected ApplicationComponent applicationComponent;
+    protected NetworkComponent networkComponent;
+
+    private APIInterface apiInterface;
+    private Picasso picasso;
 
     public static MyApplication get(Context context) {
         return (MyApplication) context.getApplicationContext();
@@ -18,14 +26,22 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        applicationComponent = DaggerApplicationComponent
+
+        networkComponent = DaggerNetworkComponent
                 .builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
-        //applicationComponent.inject(this);
+
+        apiInterface = networkComponent.getApiInterface();
+
+        picasso = networkComponent.getPicasso();
     }
 
-    public ApplicationComponent getComponent(){
-        return applicationComponent;
+    public APIInterface getApiInterface() {
+        return apiInterface;
+    }
+
+    public Picasso getPicasso() {
+        return picasso;
     }
 }
