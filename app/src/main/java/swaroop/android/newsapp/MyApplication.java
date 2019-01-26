@@ -27,14 +27,17 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        networkComponent = DaggerNetworkComponent
-                .builder()
+        networkComponent = DaggerNetworkComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
 
         apiInterface = networkComponent.getApiInterface();
-
         picasso = networkComponent.getPicasso();
+    }
+
+
+    public NetworkComponent component() {
+        return networkComponent;
     }
 
     public APIInterface getApiInterface() {
