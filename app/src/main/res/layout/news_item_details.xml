@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="-25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/heart"
+        app:backgroundTint="@color/colorPrimaryLight" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:text="10 of the Best Mobile App Templates of 2018 on Android/iOS"
+        android:textColor="#222"
+        android:textSize="30sp"
+        android:typeface="serif"
+        android:justificationMode="inter_word" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp">
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="30dp"
+            android:layout_gravity="start"
+            android:src="@drawable/calendar_range" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="none"
+            android:paddingTop="3dp"
+            android:text="Dec 13, 2017"
+            android:textColor="#555"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:lines="@android:integer/config_mediumAnimTime"
+        android:padding="10dp"
+        android:text="Building an App from scratch can be a time-consuming and painful task for most of us, and that’s where the well-built mobile app templates come in handy. The contemporary technological scene has been stuffed with a range of mobile apps, but we’re poised to use the best mobile apps with excellent UX/UI design."
+        android:textColor="#444"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Source :- Swaroop Suthar"
+            android:textColor="#888" />
+    </RelativeLayout>
+
+</LinearLayout>
