@@ -8,13 +8,14 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.Url;
 import swaroop.android.newsapp.model.GithubRepo;
+import swaroop.android.newsapp.model.NewsResult;
 
 import static swaroop.android.newsapp.utils.Constants.NEWS_API_KEY;
 
 public interface APIInterface {
 
     @GET("top-headlines?country=in&apiKey="+ NEWS_API_KEY)
-    Call<List> getTopHeadlines(@Query("format") String format);
+    Call<List<NewsResult>> getTopHeadlines();
 
     @GET
     Call<List> getNewsData(@Url String url, @Query("format") String format);
